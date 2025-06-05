@@ -1,0 +1,18 @@
+{
+    "java.project.sourcePaths": [
+        "."
+    ],
+    "java.project.referencedLibraries": [
+        "c:\\Users\\Pessoal\\Desktop\\amt-solutions-desktop-java\\lib\\javafx\\lib\\javafx.graphics.jar",
+        "c:\\Users\\Pessoal\\Desktop\\amt-solutions-desktop-java\\lib\\javafx\\lib\\jdk.jsobject.jar",
+        "c:\\Users\\Pessoal\\Desktop\\amt-solutions-desktop-java\\lib\\javafx\\lib\\javafx.fxml.jar",
+        "c:\\Users\\Pessoal\\Desktop\\amt-solutions-desktop-java\\lib\\javafx\\lib\\javafx.controls.jar",
+        "c:\\Users\\Pessoal\\Desktop\\amt-solutions-desktop-java\\lib\\javafx\\lib\\javafx.web.jar",
+        "c:\\Users\\Pessoal\\Desktop\\amt-solutions-desktop-java\\lib\\javafx\\lib\\jfx.incubator.richtext.jar",
+        "c:\\Users\\Pessoal\\Desktop\\amt-solutions-desktop-java\\lib\\javafx\\lib\\javafx-swt.jar",
+        "c:\\Users\\Pessoal\\Desktop\\amt-solutions-desktop-java\\lib\\javafx\\lib\\javafx.base.jar",
+        "c:\\Users\\Pessoal\\Desktop\\amt-solutions-desktop-java\\lib\\javafx\\lib\\javafx.media.jar",
+        "c:\\Users\\Pessoal\\Desktop\\amt-solutions-desktop-java\\lib\\javafx\\lib\\javafx.swing.jar",
+        "c:\\Users\\Pessoal\\Desktop\\amt-solutions-desktop-java\\lib\\javafx\\lib\\jfx.incubator.input.jar"
+    ]
+}
