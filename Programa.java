@@ -7,6 +7,8 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import javafx.stage.Screen;
 import javafx.geometry.Rectangle2D;
+import java.sql.Date;
+import java.time.LocalDate;
 
 
 public class Programa extends Application {
@@ -17,7 +19,7 @@ public class Programa extends Application {
 
     }
 
-    @Override 
+     @Override 
     public void start(Stage stage) {
 
         BorderPane border = new BorderPane();
@@ -27,11 +29,9 @@ public class Programa extends Application {
 
 
 
-        Label labelTopo = new Label("Menu:");
-        Button btn1 = new Button("Botão 1");
-        Button btn2 = new Button("Botão 2");
+        Label labelTopo = new Label("tela inicial");
 
-        hbox.getChildren().addAll(labelTopo, btn1, btn2);
+        hbox.getChildren().addAll(labelTopo);
 
         border.setTop(hbox);
 
@@ -39,28 +39,52 @@ public class Programa extends Application {
 
 
         HBox centerHbox = new HBox(10);
-        Button btnEstoque = new Button("Estoque");
-        btnEstoque.setStyle(
+        Button btnTeste = new Button("Teste");
+        Button btnNav = new Button("Criar pedido");
+        btnTeste.setStyle(
             "-fx-padding: 20px;" +              
             "-fx-background-radius: 10px;" +    
             "-fx-border-radius: 10px;" +        
             "-fx-border-color: black;" +        
             "-fx-border-width: 2px;"             
         );
-        centerHbox.getChildren().addAll(btnEstoque);
+        
+        centerHbox.getChildren().addAll(btnTeste, btnNav);
         border.setCenter(centerHbox);
+        btnTeste.setOnAction(e -> {
+    
+            String nome = "Pedido Teste"; 
+
+            Date dataAtual = Date.valueOf(LocalDate.now());
+
+            Pedido novoPedido = new Pedido(nome, dataAtual);
+
+            ArquivoPedido.adicionarPessoa(novoPedido); 
+
+            System.out.println("Pedido criado: " + novoPedido);
+            
+        });
+
+        btnNav.setOnAction(e -> {
+    
+            Scene novaCena = TelaCriarPedido.getScene();
+            stage.setScene(novaCena);
+            
+        });
+
+        
 
 
-        Scene scene = new Scene(border);
-        Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
+            Scene scene = new Scene(border);
+            Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
 
-        stage.setX(screenBounds.getMinX());
-        stage.setY(screenBounds.getMinY());
-        stage.setWidth(screenBounds.getWidth());
-        stage.setHeight(screenBounds.getHeight());
-        stage.setScene(scene);
-        stage.setTitle("Teste");
-        stage.show();
+            stage.setX(screenBounds.getMinX());
+            stage.setY(screenBounds.getMinY());
+            stage.setWidth(screenBounds.getWidth());
+            stage.setHeight(screenBounds.getHeight());
+            stage.setScene(scene);
+            stage.setTitle("Teste");
+            stage.show();
 
     }
 

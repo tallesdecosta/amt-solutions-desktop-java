@@ -1,12 +1,35 @@
 {
   "version": "0.2.0",
   "configurations": [
+
+    {
+      "type": "java",
+      "name": "PedidoApp",
+      "request": "launch",
+      "mainClass": "PedidoApp",
+      "projectName": "amt-solutions-desktop-java_b040d7a7"
+    },
+    {
+      "type": "java",
+      "name": "Pedido",
+      "request": "launch",
+      "mainClass": "Pedido",
+      "projectName": "amt-solutions-desktop-java_b040d7a7"
+    },
     {
       "type": "java",
       "name": "Executar JavaFX",
       "request": "launch",
       "mainClass": "Programa",
       "vmArgs": "--module-path lib/javafx/lib --add-modules javafx.controls,javafx.fxml"
-    }
+    },
+    {
+  "type": "java",
+  "name": "Launch PedidoApp",
+  "request": "launch",
+  "mainClass": "PedidoApp",
+  "vmArgs": "--module-path lib/javafx/lib --add-modules javafx.controls,javafx.fxml"
+}
+
   ]
 }
